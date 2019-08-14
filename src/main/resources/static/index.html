@@ -4,6 +4,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
       <title>Spring Boot WebSocket Chat Application | CalliCoder</title>
       <link rel="stylesheet" href="/css/main.css" />
+      <link rel="stylesheet" href="/css/bootstrap.css" />
+
   </head>
   <body>
     <noscript>
@@ -25,29 +27,37 @@
     </div>
 
     <div id="chat-page" class="hidden">
-        <div class="chat-container">
-            <div class="chat-header">
-                <h2>Spring WebSocket Chat Demo</h2>
+        <div class="row">
+            <div class="col-md-5" id="myDiv">
             </div>
-            <div class="connecting">
-                Connecting...
-            </div>
-            <ul id="messageArea">
-
-            </ul>
-            <form id="messageForm" name="messageForm" nameForm="messageForm">
-                <div class="form-group">
-                    <div class="input-group clearfix">
-                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
-                        <button type="submit" class="primary">Send</button>
-                    </div>
+            <div class="col-md-6 chat-container">
+                <div class="chat-header">
+                    <h2>Spring WebSocket Chat Demo</h2>
                 </div>
-            </form>
-        </div>
-    </div>
+                <div class="connecting">
+                    Connecting...
+                </div>
+                <ul id="messageArea">
 
+                </ul>
+                <form id="messageForm" name="messageForm" nameForm="messageForm">
+                    <div class="form-group">
+                        <div class="input-group clearfix">
+                            <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                            <button type="submit" class="primary">Add Point</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
   </body>
 </html>
